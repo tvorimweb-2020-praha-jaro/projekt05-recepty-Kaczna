@@ -1,7 +1,12 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, :after, :before { box-sizing: inherit; }
 
+html {
+    box-sizing: border-box;
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+}
 
 /* -------------------------------------------------- */
 
@@ -16,7 +21,6 @@ notebook/pc:
 @media (min-width: 860px) {
 }
 */
-
 
 body {
     margin: 0;
@@ -33,8 +37,142 @@ body {
     color: silver;
 }
 
-
 /* ------------------------------- */
+
 /* ----- DOLE BUDE TVOJE CSS ----- */
+
 /* ------------------------------- */
 
+.nabidka {
+    color: white;
+    margin: auto;
+}
+
+.hlavni-recept {
+    min-height: 200px;
+    background-image: url(images/burger.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+}
+
+.hlavni-recept h1 {
+    font-size: 28px;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 10px 0 10px 0;
+}
+
+h1.nazev {
+    font-size: 18px;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 10px 0 10px 0;
+}
+.komentare, .sekce {
+    font-family: 'Source Sans Pro', sans-serif;  /* Jak by šlo docílit větší čitelnosti textů na pozadí? Použít Opacity, Z-index nebo něco jiného?*/
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.sekce {
+    position: absolute;
+}
+
+.komentare {
+    float: right;
+    top: 10px;
+    left: 390px;
+}
+
+.recept2, .recept3, .recept4, .recept5 {
+    min-height: 90px;
+    padding: 10px;
+    position: relative;
+}
+
+.recept2 {
+    background-image: url(images/sushi.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.recept3 {
+    background-image: url(images/kure.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.recept4 {
+    background-image: url(images/rajcata.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.recept5 {
+    background-image: url(images/grilovani.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media (min-width: 480px) {
+    .hlavni-recept {
+        min-height: 250px;
+        padding: 20px;
+        width: 100%;
+    }
+    .hlavni-recept h1 {
+        font-size: 36px;
+        padding: 0 10px 20px 0;
+    }
+    h1.nazev {
+        font-size: 22px;
+        padding: 0 10px 20px 0;
+    }
+    .recept2, .recept3, .recept4, .recept5 {
+        min-height: 150px;
+        padding: 20px;
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (min-width: 860px) {
+    .hlavni-recept {
+        min-height: 400px;
+    }
+    .recept2, .recept3, .recept4, .recept5 {
+        min-height: 200px;
+    }
+    .hlavni-recept h1 {
+        font-size: 48px;
+    }
+    h1.nazev {
+        font-size: 28px;
+    }
+    .nabidka {
+        display: flex;
+    }
+    .levy-recept {
+        flex: 1 1 calc( 100% / 3);
+    }
+    .prave-recepty {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 calc( 100% / 2);
+    }
+}
